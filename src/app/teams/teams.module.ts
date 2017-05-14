@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { TeamListComponent } from './team-list/team-list.component';
+import { SharedModule } from '../shared/shared.module';
 import { TeamsRoutingModule } from './teams.routing';
-import {CommonModule} from '../common/common.module';
+import { TeamListComponent } from './team-list/team-list.component';
 
-@NgModule(
-  {
-    imports: [ BrowserModule, FormsModule, TeamsRoutingModule, CommonModule ],
-    declarations: [ TeamListComponent ]
-  }
-)
-export class TeamModule {}
+@NgModule({
+  declarations: [TeamListComponent],
+  imports: [CommonModule, ReactiveFormsModule, SharedModule, TeamsRoutingModule]
+})
+export class TeamsModule { }

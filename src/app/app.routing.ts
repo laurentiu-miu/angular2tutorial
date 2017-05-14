@@ -1,4 +1,4 @@
-import { RouterModule, Routes } from '@angular/router';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import { NgModule } from '@angular/core';
 import {PlayerListComponent} from './players/player-list/player-list.component';
 import {NotFoundComponent} from './not-found/not-found/not-found.component';
@@ -6,6 +6,10 @@ import {NotFoundComponent} from './not-found/not-found/not-found.component';
 
 
 const routes: Routes = [
+  {
+    path: 'teams',
+    loadChildren: 'app/teams/teams.module#TeamsModule'
+  },
   {
     path: '',
     component: PlayerListComponent
@@ -16,7 +20,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

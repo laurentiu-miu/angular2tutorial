@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { PlayerListComponent } from './player-list/player-list.component';
-import {PlayersRoutingModule} from './players.routing';
-import {CommonModule} from '../common/common.module';
+import { PlayersRoutingModule } from './players.routing';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule(
   {
-    imports: [ BrowserModule, FormsModule, PlayersRoutingModule, CommonModule ],
+    imports: [ BrowserModule, FormsModule, PlayersRoutingModule, SharedModule ],
     declarations: [ PlayerListComponent ]
   }
 )
