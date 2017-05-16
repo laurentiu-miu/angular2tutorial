@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { PlayerModule } from './players/players.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found/not-found.component';
-import {AppRoutingModule} from './app.routing';
+import { AppRoutingModule } from './app.routing';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 
 @NgModule({
@@ -19,6 +19,7 @@ import { MainNavigationComponent } from './main-navigation/main-navigation.compo
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     PlayerModule,
     AppRoutingModule
