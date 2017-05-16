@@ -8,11 +8,13 @@ import { PlayerModule } from './players/players.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found/not-found.component';
 import {AppRoutingModule} from './app.routing';
+import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MainNavigationComponent
   ],
   imports: [
     BrowserModule,
