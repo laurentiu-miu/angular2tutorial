@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { PlayersRoutingModule } from './players.routing';
 import { SharedModule } from '../shared/shared.module';
+import { PlayersProfileComponent } from './players-profile/players-profile.component';
 
 @NgModule(
   {
     imports: [ BrowserModule, FormsModule, PlayersRoutingModule, SharedModule ],
-    declarations: [ PlayerListComponent ]
+    declarations: [ PlayerListComponent, PlayersProfileComponent ]
   }
 )
 export class PlayerModule {}

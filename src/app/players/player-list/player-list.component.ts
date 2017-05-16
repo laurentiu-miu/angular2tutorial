@@ -9,6 +9,7 @@ import {RestApiService} from '../../shared/restapi.service';
 })
 export class PlayerListComponent implements OnInit {
   listOfPlayer: Player[];
+  selectedPlayer: Player;
 
 
   constructor(private apiService: RestApiService) {
@@ -16,6 +17,10 @@ export class PlayerListComponent implements OnInit {
 
   ngOnInit() {
     this.listOfPlayer = this.apiService.getListOfPlayers();
+  }
+
+  setSelectedPlayer(selectedPlayer: Player) {
+    this.selectedPlayer = selectedPlayer;
   }
 
 }
