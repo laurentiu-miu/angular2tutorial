@@ -1,15 +1,9 @@
 import {NgModule} from '@angular/core';
 import {RestApiService} from './restapi.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {InjuryLookupService} from './lookup/injury-lookup.service';
+import {TeamLookupService} from './lookup/team-lookup.service';
 
 @NgModule({
-  imports: [
-    ReactiveFormsModule
-  ],
-  providers: [RestApiService],
-  exports: [
-    FormsModule,
-    ReactiveFormsModule
-  ]
+  providers: [RestApiService, InjuryLookupService, TeamLookupService]
 })
 export class SharedModule { }
